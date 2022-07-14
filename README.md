@@ -1,5 +1,5 @@
-# jQuery Menu Editor 1.0.1
-# >>> [DEMO](http://codeignitertutoriales.com/demos/jqmenueditor/)
+# jQuery Menu Editor 1.1.0
+# >>> [DEMO](https://davicotico.github.io/jQuery-Menu-Editor/)
 ### Features
 * Add, Update & Remove items from Menu
 * Multilevel Drag & Drop
@@ -9,12 +9,7 @@
 * Load data from JSON string 
 * The output is a Json string
 
-This project was inspirated and based in jQuery-Sortable-lists http://camohub.github.io/jquery-sortable-lists/index.html and added many features.
-
-### The Form item editor
-![menu-multilevel](http://codeignitertutoriales.com/wp-content/uploads/2018/10/jquery-menu-editor-form.jpg)
-### The Multilevel Drag & Drop
-![multilevel-menu](http://codeignitertutoriales.com/wp-content/uploads/2018/10/jquery-menu-editor-sortable.jpg)
+This project is based on jQuery-Sortable-lists (v1.4.0) http://camohub.github.io/jquery-sortable-lists/index.html and added many features.
 
 # Documentation
 
@@ -96,7 +91,13 @@ var iconPickerOptions = {searchText: "Buscar...", labelHeader: "{0}/{1}"};
 var sortableListOptions = {
     placeholderCss: {'background-color': "#cccccc"}
 };
-var editor = new MenuEditor('myEditor', {listOptions: sortableListOptions, iconPicker: iconPickerOptions});
+var editor = new MenuEditor('myEditor', 
+            { 
+            listOptions: sortableListOptions, 
+            iconPicker: iconPickerOptions,
+            maxLevel: 2 // (Optional) Default is -1 (no level limit)
+            // Valid levels are from [0, 1, 2, 3,...N]
+            });
 editor.setForm($('#frmEdit'));
 editor.setUpdateButton($('#btnUpdate'));
 //Calling the update method
