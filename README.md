@@ -415,7 +415,7 @@ $("#myTextarea").text(str);
 
 ### Know Bugs
 
-- Broken Bootstrap 5 Icom
+- Broken Bootstrap 5 Icon
 - Broken icon list position
 - Typo variable
 
